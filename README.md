@@ -12,6 +12,7 @@
 </div>
 
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
 <a href="">
@@ -36,8 +37,13 @@
 <details>
     <summary>Table of Contents</summary>
     <ol>
-        <li><a href="#about-the-project">About The Project</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#what-is-markdown">What is markdown?</a></li>
+        <li>
+            <a href="#about-the-project">About The Project</a>
+            <ul>
+                <li><a href="#built-with">Built With</a></li>
+            </ul>
+        </li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#contributing">Contributing</a></li>
         <li><a href="#license">License</a></li>
@@ -48,11 +54,29 @@
 
 [![Website Screen Shot][product-screenshot]](https://remarked.vercel.app/)
 
+<!-- WHAT IS MARKDOWN -->
+
+## What is markdown?
+
+**Markdown** is a lightweight markup language for creating formatted text using a plain-text editor. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages. While most prefer to use it in collaborative software, documentation pages, and readme files, others prefer it purely for the writing experience it offers.
+
+Using Markdown is different than using a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.
+
+For example, to denote a heading, you add a number sign before it (e.g., # Heading One) It may take a while to get used to seeing Markdown syntax in your text, and that is why tools like this project can help users by blending the writing experiences of pure markdown and common WYSIWYG apps together.
+
+To learn how to write markdown I suggest reading the standard, unambiguous syntax specification [CommonMark](https://commonmark.org/). Another great resource is this [basic syntax guide](https://www.markdownguide.org/basic-syntax/), with a list of all markdown's most used features.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-Description
+This projects aims to create a web editor for markdown with an easy to use interface that helps the user write faster. The app has local storage support to save all the documents, as well as features to download the documents in `.md`, `.txt` and `.pdf` file formats.
+
+This app provides a toolbar with common WYSIWYG tools, and helps visualizing the output of what the user is writing by showing a live preview. The website shows the optimal layout for the app depending on the device's screen size.
+
+Eventually I would like to turn this project into a full-stack web app (maybe with firebase?) that supports user registration and login to be able to sync your files on multiple devices. I would also like to write my own markdown interpreter instead of using the [React-mde](https://github.com/andrerpena/react-mde#readme) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,6 +87,7 @@ Description
 -   [React Router](https://reactrouter.com)
 -   [Typescript](https://www.typescriptlang.org/)
 -   [Sass](https://sass-lang.com/)
+-   [React-mde](https://github.com/andrerpena/react-mde#readme)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -70,8 +95,15 @@ Description
 
 ## Roadmap
 
--   [x] Task 1
--   [ ] Task 2
+-   [ ] App routing with placeholder pages
+-   [ ] Main app interface mockup (responsive)
+-   [ ] Side navbar
+-   [ ] Local storage sync tools
+-   [ ] Markdown text editor and live preview
+-   [ ] Document save in `localStorage`
+-   [ ] Toolbar layout (responsive)
+-   [ ] Toolbar functionalities
+-   [ ] Export of documents in supported file formats
 
 See the [open issues](https://github.com/Riki9811/remarked/issues) for a full list of proposed features (and known issues).
 
