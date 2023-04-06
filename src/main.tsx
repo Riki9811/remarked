@@ -5,7 +5,6 @@ import "./index.scss";
 import Home from "./routes/home";
 import ErrorPage from "./routes/error";
 import App from "./routes/app";
-import Temp from "./routes/temp";
 
 const router = createBrowserRouter([
 	{
