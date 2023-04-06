@@ -1,0 +1,74 @@
+.container {
+	width: var(--size);
+	height: var(--size);
+	cursor: pointer;
+	isolation: isolate;
+}
+
+.container::before,
+.container::after {
+	content: "";
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	background-color: var(--color);
+    transition: rotate 500ms cubic-bezier(0.22, 0.9, 0.44, 1.3);
+}
+
+.container::before {
+	rotate: 45deg;
+}
+
+.container {
+	.dot {
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		border-radius: 50%;
+		background-color: var(--background);
+		z-index: 1;
+	}
+
+	.dot::after {
+		content: "";
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		top: 50%;
+		left: 50%;
+		translate: -90% -50%;
+		border-radius: 50%;
+		background-color: var(--color);
+		transition-property: translate, width, height;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in-out;
+	}
+
+	&:hover::before,
+	&:hover::after,
+	&:hover .dot::after {
+		background-color: var(--color-hover);
+	}
+}
+
+.container.dark {
+	&::before {
+        rotate: 225deg;
+    }
+
+	&::after {
+        rotate: 180deg;
+	}
+
+	.dot::after {
+		width: 70%;
+		height: 70%;
+		translate: -50% -50%;
+	}
+}

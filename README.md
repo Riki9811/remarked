@@ -95,7 +95,7 @@ Eventually I would like to turn this project into a full-stack web app (maybe wi
 
 ## Roadmap
 
--   [ ] App routing with placeholder pages
+-   [x] App routing with placeholder pages
 -   [ ] Main app interface mockup (responsive)
 -   [ ] Side navbar
 -   [ ] Local storage sync tools
