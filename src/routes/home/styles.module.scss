@@ -1,33 +1,8 @@
+@use "src/mixins.scss";
+
 .home {
 	width: 100%;
 	min-height: 100%;
-}
-
-.header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	background-color: var(--background-alt);
-	color: var(--text-alt);
-	padding: 0.3em;
-	z-index: 1;
-}
-
-.launch {
-	padding: 0.25em 0.5em;
-
-	&:hover {
-		background-color: var(--background-alt-highlight);
-	}
-}
-
-.toggle {
-    position: absolute;
-    right: 0.5em;
-    top: 50%;
-    translate: 0 -50%;;
 }
 
 .splash {
@@ -39,6 +14,14 @@
 	align-items: center;
 	padding-inline: 25%;
 	color: var(--text-highlight);
+
+	@include mixins.device(tablet) {
+		padding-inline: 15%;
+	}
+
+	@include mixins.device(mobile) {
+		padding-inline: 8%;
+	}
 }
 
 .down-button {
@@ -46,86 +29,10 @@
 	bottom: 1em;
 	left: 50%;
 	translate: -50%;
-	background-color: var(--background-main);
+	background: none;
 	color: var(--text-main);
 
 	&:hover {
 		background-color: var(--background-highlight);
 	}
-}
-
-.article-dark {
-	background-color: var(--background-highlight);
-}
-
-.article-wrapper {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2em;
-	max-width: 1200px;
-	margin-inline: auto;
-	padding-inline: 1em;
-	padding-block: 6em;
-}
-
-.article-image {
-    margin-top: 3em;
-}
-
-.article-content {
-	h1 {
-		margin-bottom: 1em;
-	}
-	p {
-		margin-top: 2em;
-	}
-	a {
-		color: var(--blue);
-		text-decoration: underline;
-	}
-}
-
-.footer {
-	font-size: 80%;
-	background: var(--blue);
-	color: var(--text-alt-highlight);
-	padding: 1em;
-}
-
-.footer-row {
-	display: inline-flex;
-	gap: 1em;
-}
-
-.footer-wrapper {
-	margin-inline: auto;
-	padding-inline: 1em;
-	max-width: fit-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 0.3em;
-}
-
-.footer-icon {
-	font-size: 150%;
-	color: var(--text-alt-highlight);
-
-	&:hover {
-		color: var(--text-alt);
-	}
-}
-
-.footer-link {
-	color: var(--text-alt);
-	text-decoration: underline;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-.space {
-	gap: 0.4em;
 }

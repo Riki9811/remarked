@@ -1,0 +1,26 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: var(--background-alt);
+	color: var(--text-alt);
+	padding: 0.3em;
+	z-index: 1;
+}
+
+.launch {
+	padding: 0.25em 0.5em;
+
+	&:hover {
+		background-color: var(--background-alt-highlight);
+	}
+}
+
+.toggle {
+	position: absolute;
+	right: 0.5em;
+	top: 50%;
+	translate: 0 -50%;
+}

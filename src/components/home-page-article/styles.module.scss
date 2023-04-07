@@ -1,0 +1,60 @@
+@use "src/mixins.scss";
+
+.dark {
+	background-color: var(--background-highlight);
+}
+
+$article-max-w: 1200px;
+
+.article-wrapper {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	gap: 2em;
+	max-width: $article-max-w;
+	margin-inline: auto;
+	padding-inline: 1em;
+	padding-block: 6em;
+
+	@include mixins.device(tablet_open) {
+		grid-template-columns: 1fr;
+	}
+
+	@include mixins.device(tablet) {
+		padding-inline: 5%;
+	}
+}
+
+.article-image {
+	width: 70%;
+
+	@include mixins.media-max-width(calc($article-max-w * 0.9)) {
+		width: auto;
+	}
+
+	@include mixins.device(mobile) {
+		margin-top: 1em;
+		width: auto;
+	}
+}
+
+.article-content {
+	width: 100%;
+
+	h1 {
+		margin-bottom: 1em;
+		white-space: nowrap;
+        
+		@include mixins.device(mobile) {
+            font-size: 200%;
+		}
+	}
+	p {
+		margin-top: 2em;
+	}
+	a {
+		color: var(--blue);
+		text-decoration: underline;
+	}
+}

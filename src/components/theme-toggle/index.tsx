@@ -30,8 +30,8 @@ export default function ThemeToggle(props: ThemeToggleProps) {
 		"--color": color ?? "var(--text-highlight)",
 		"--color-hover": colorHover ?? "var(--text-main)",
 		"--background": background ?? "var(--background-main)",
-    };
-    const darkStyle: ThemeToggleCSSProperties = {
+	};
+	const darkStyle: ThemeToggleCSSProperties = {
 		"--size": size ?? "1.5em",
 		"--color": colorDark ?? "var(--text-highlight)",
 		"--color-hover": colorHoverDark ?? "var(--text-main)",

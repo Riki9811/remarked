@@ -1,0 +1,49 @@
+@use "src/mixins.scss";
+
+.footer {
+	font-size: 80%;
+	background: var(--blue);
+	color: var(--text-alt-highlight);
+	padding: 2em 1em;
+}
+
+.footer-row {
+	display: inline-flex;
+	gap: 1em;
+}
+
+.footer-wrapper {
+	margin-inline: auto;
+	max-width: fit-content;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: auto auto;
+	gap: 0.3em 5em;
+
+	@include mixins.device(mobile) {
+		gap: 0.3em 2em;
+	}
+}
+
+.footer-icon {
+	font-size: 150%;
+	color: var(--text-alt-highlight);
+
+	&:hover {
+		color: var(--text-alt);
+	}
+}
+
+.footer-link {
+	color: var(--text-alt);
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.space {
+	gap: 0.4em;
+}
