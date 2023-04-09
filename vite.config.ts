@@ -10,8 +10,10 @@ export default defineConfig({
 			"@": resolve(__dirname, "./src"),
 			"@assets": resolve(__dirname, "./src/assets"),
 			"@components": resolve(__dirname, "./src/components"),
+			"@constants": resolve(__dirname, "./src/constants"),
 			"@hooks": resolve(__dirname, "./src/hooks"),
 			"@routes": resolve(__dirname, "./src/routes"),
+			"@myTypes": resolve(__dirname, "./src/types"),
 		},
 	},
 	server: {
