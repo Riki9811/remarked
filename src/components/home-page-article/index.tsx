@@ -38,7 +38,10 @@ export default function HomePageArticle({ children, id, imageAlt, imageSrc, isDa
 		return (
 			<article id={id} className={articleClass}>
 				<div className={styles["article-wrapper"]}>
-					TODO
+					<div className={styles["article-content"]}>{children}</div>
+					<div className={styles["article-image"]}>
+						<img src={imageSrc} alt={imageAlt} loading="lazy" />
+					</div>
 				</div>
 			</article>
 		);

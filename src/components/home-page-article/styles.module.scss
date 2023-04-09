@@ -45,16 +45,39 @@ $article-max-w: 1200px;
 	h1 {
 		margin-bottom: 1em;
 		white-space: nowrap;
-        
+
 		@include mixins.device(mobile) {
-            font-size: 200%;
+			font-size: 200%;
 		}
 	}
+
 	p {
 		margin-top: 2em;
 	}
+
 	a {
 		color: var(--blue);
 		text-decoration: underline;
+	}
+}
+
+.article-content h4 {
+	margin-top: 2em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+    transition: gap 500ms;
+
+    &:hover {
+        gap: 1em;
+    }
+
+	span {
+		display: block;
+		width: 0.7em;
+		height: 0.7em;
+		rotate: 45deg;
+		border-top: 0.2em solid currentColor;
+		border-right: 0.2em solid currentColor;
 	}
 }
