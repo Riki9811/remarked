@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const HOME_ARTICLES: HomeArticle[] = [
 	{
 		id: "what-is-markdown",
-		imageSrc: "/src/assets/what-is-markdown.png",
-		darkImageSrc: "/src/assets/what-is-markdown (dark).png",
+		imageSrc: "/src/assets/home-page/what-is-markdown.png",
+		darkImageSrc: "/src/assets/home-page/what-is-markdown (dark).png",
 		imageAlt: "The left box has some text with headers, paragraphs. The second box shows the same text but written and styled as markdown.",
 		children: (
 			<>
@@ -28,8 +28,8 @@ const HOME_ARTICLES: HomeArticle[] = [
 	},
 	{
 		id: "export-options",
-		imageSrc: "",
-		darkImageSrc: "",
+		imageSrc: "/src/assets/home-page/export-options.png",
+		darkImageSrc: "/src/assets/home-page/export-options (dark).png",
 		imageAlt: "TODO",
 		children: (
 			<>
