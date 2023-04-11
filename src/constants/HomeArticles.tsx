@@ -1,11 +1,13 @@
 import HomeArticle from "@myTypes/HomeArticle";
 import { Link } from "react-router-dom";
 
+const BASE_PATH = "/src/assets/home-page/";
+
 const HOME_ARTICLES: HomeArticle[] = [
 	{
 		id: "what-is-markdown",
-		imageSrc: "/src/assets/home-page/what-is-markdown.png",
-		darkImageSrc: "/src/assets/home-page/what-is-markdown (dark).png",
+		imageSrc: `${BASE_PATH}what-is-markdown.png`,
+		darkImageSrc: `${BASE_PATH}what-is-markdown (dark).png`,
 		imageAlt: "The left box has some text with headers, paragraphs. The second box shows the same text but written and styled as markdown.",
 		children: (
 			<>
@@ -28,8 +30,8 @@ const HOME_ARTICLES: HomeArticle[] = [
 	},
 	{
 		id: "export-options",
-		imageSrc: "/src/assets/home-page/export-options.png",
-		darkImageSrc: "/src/assets/home-page/export-options (dark).png",
+		imageSrc: `${BASE_PATH}export-options.png`,
+		darkImageSrc: `${BASE_PATH}export-options (dark).png`,
 		imageAlt: "TODO",
 		children: (
 			<>
@@ -48,8 +50,8 @@ const HOME_ARTICLES: HomeArticle[] = [
 	},
 	{
 		id: "wysiwyg-toolbar",
-		imageSrc: "",
-		darkImageSrc: "",
+		imageSrc: `${BASE_PATH}wysiwyg-toolbar.png`,
+		darkImageSrc: `${BASE_PATH}wysiwyg-toolbar (dark).png`,
 		imageAlt: "TODO",
 		children: (
 			<>

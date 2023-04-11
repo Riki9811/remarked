@@ -66,11 +66,11 @@ $article-max-w: 1200px;
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5em;
-    transition: gap 500ms;
+	transition: gap 500ms;
 
-    &:hover {
-        gap: 1em;
-    }
+	&:hover {
+		gap: 1em;
+	}
 
 	span {
 		display: block;
@@ -79,5 +79,42 @@ $article-max-w: 1200px;
 		rotate: 45deg;
 		border-top: 0.2em solid currentColor;
 		border-right: 0.2em solid currentColor;
+	}
+}
+
+.special {
+	--gradient-hs: 214, 96%;
+	--gradient-color-1: hsl(var(--gradient-hs), 30%);
+	--gradient-color-2: hsl(var(--gradient-hs), 10%);
+	--gradient: linear-gradient(90deg, var(--gradient-color-2) 33%, var(--gradient-color-1) 70%);
+	color: var(--white);
+	background: var(--gradient);
+
+	.article-wrapper {
+		padding-block: 12em;
+	}
+
+	@include mixins.device(tablet_open) {
+		--gradient: linear-gradient(160deg, var(--gradient-color-2) 43%, var(--gradient-color-1) 90%);
+
+		.article-wrapper {
+			padding-block: 4em 1em;
+		}
+	}
+
+	@include mixins.device(desktop) {
+		position: relative;
+
+		.article-image {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 45%;
+
+			@include mixins.media-max-width($article-max-w) {
+				top: 50%;
+				translate: 0 -50%;
+			}
+		}
 	}
 }

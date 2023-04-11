@@ -10,7 +10,7 @@ interface ArticleProps {
 }
 
 export default function HomePageArticle({ children, id, imageAlt, imageSrc, isDark, layout = "normal" }: ArticleProps) {
-	const articleClass = `${isDark ? styles.dark : ""}`;
+	const articleClass = isDark ? styles.dark : undefined;
 
 	if (layout === "normal") {
 		return (
@@ -36,9 +36,10 @@ export default function HomePageArticle({ children, id, imageAlt, imageSrc, isDa
 		);
 	} else {
 		return (
-			<article id={id} className={articleClass}>
+			<article id={id} className={articleClass ? `${styles.special} ${articleClass}` : styles.special}>
 				<div className={styles["article-wrapper"]}>
 					<div className={styles["article-content"]}>{children}</div>
+					<div className="spacer" />
 					<div className={styles["article-image"]}>
 						<img src={imageSrc} alt={imageAlt} loading="lazy" />
 					</div>
